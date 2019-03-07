@@ -16,5 +16,5 @@ mix.config.fileLoaderDirs.fonts     = "vendor/avored-default/fonts";
 mix.config.fileLoaderDirs.images    = "vendor/avored-default/images";
 
 mix.copy('themes/avored/default/assets/images', 'public/vendor/avored-default/images');
-mix.sass('themes/avored/default/assets/sass/app.scss', 'vendor/avored-default/css');
+mix.sass('themes/avored/default/assets/sass/app.scss', 'vendor/avored-default/css').sourceMaps();
 mix.js('themes/avored/default/assets/js/app.js', 'vendor/avored-default/js');

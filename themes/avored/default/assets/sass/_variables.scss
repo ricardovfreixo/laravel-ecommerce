@@ -15,7 +15,7 @@ $gray-dark: $gray-800;
 $black: #000 !default;
 
 $red:                   #b71c1c;
-$brand-primary:         darken($red, 6.5%) !default; // #337ab7
+$brand-primary:         darken($gray-900, 6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -23,8 +23,8 @@ $brand-danger: #d9534f !default;
 
 // Top navigation background colors
 $body-bg: #f8fafc;
-$header-bg: $red;
-$top-bg: $red;
+$header-bg: $white;
+$top-bg: $white;
 
 // Buttons
 $btn-font-weight:                normal !default;
