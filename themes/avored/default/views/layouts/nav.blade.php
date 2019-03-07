@@ -34,7 +34,8 @@
                         <ul class="main-navbar navbar-nav mr-auto">
                             @auth()
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('home') }}">Welcome {{ Auth::user()->full_name }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}">
+                                        Welcome {{ Auth::user()->full_name }}</a>
                                 </li>
                             @endauth
                             <li class="nav-item">
@@ -49,12 +50,12 @@
                                 </a>
                                     <div class="dropdown-menu">
                                         @foreach($currencies as $siteCurrencyId => $currencyCode)
-                                        <?php 
-                                            if (strpos(URL::current(), '?')) {
-                                                $url = URL::current() . '&currency_code=' . $currencyCode;
-                                            } else {
-                                                $url = URL::current() . '?currency_code=' . $currencyCode;
-                                            }
+                                        <?php
+                                        if (strpos(URL::current(), '?')) {
+                                            $url = URL::current() . '&currency_code=' . $currencyCode;
+                                        } else {
+                                            $url = URL::current() . '?currency_code=' . $currencyCode;
+                                        }
 
                                         ?>
                                             <a class="dropdown-item" 
@@ -75,9 +76,11 @@
     </div>
 </nav>
 
-<header style="padding: 20px 0;">
+<header style="padding: 60px 0;">
     <div class="container text-center">
-        <a class="navbar-brand" href="{{ route('home') }}"> <img class="w-75" src="{{ asset('vendor/avored-default/images/logo.svg') }}" alt="logo"> </a>
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img class="w-75" src="{{ asset('vendor/avored-default/images/logo.svg') }}" alt="logo">
+        </a>
     </div>
 </header>
    
