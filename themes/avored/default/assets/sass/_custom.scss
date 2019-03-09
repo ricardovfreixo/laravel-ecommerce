@@ -1,3 +1,15 @@
+body, html {
+  height:1005;
+}
+
+.bg {
+  background-image: url('/vendor/avored-default/images/one.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto  ;
+}
+
 .tab-content {
   background-color: $white;
   padding: 20px 0 0 0;

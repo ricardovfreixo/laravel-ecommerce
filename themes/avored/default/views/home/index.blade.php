@@ -15,14 +15,12 @@
         <div class="row">
         </div>
         <div class="row">
-            <div class="col-12" style="min-height: 450px">
-
-                @if($pageModel !== null)
-                    @markdown($pageModel->content)
-                @else
-                    <div class="h1">AvoRed E commerce</div>
-                    <h6>Home Page</h6>
-                @endif
+            <div class="col-sd-12 col-md-4 float-right" style="min-height: 450px">
+                <img src="{{url('/vendor/avored-default/images/one.jpg')}}" class="w-75">
+            </div>
+            <div class="col-sd-12 col-md-6 float-left" style="min-height: 450px">
+                <h6>Why Paper Straws!</h6>
+                text text
             </div>
         </div>
     </div>
