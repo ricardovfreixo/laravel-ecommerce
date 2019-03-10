@@ -17,12 +17,15 @@ Route::get('category/{slug}', 'CategoryViewController@view')->name('category.vie
 Route::get('product/{slug}', 'ProductViewController@view')->name('product.view');
 Route::get('product-search', 'SearchController@result')->name('search.result');
 
-Route::post('product-demo-download', 'ProductViewController@downloadDemoProduct')->name('product.demo.download');
 
 Route::post('add-to-cart', 'CartController@addToCart')->name('cart.add-to-cart');
 Route::get('cart/view', 'CartController@view')->name('cart.view');
 Route::put('cart/update', 'CartController@update')->name('cart.update');
 Route::get('cart/destroy/{id}', 'CartController@destroy')->name('cart.destroy');
+
+Route::get('products','HomeController@products');
+Route::get('trade','HomeController@trade');
+Route::get('contact','HomeController@contact');
 
 Route::get('checkout', 'CheckoutController@index')->name('checkout.index');
 

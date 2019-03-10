@@ -1,32 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <head>
 
-    <title>@yield('meta_title', $metaTitle)</title>
-    <meta name="description" content="@yield('meta_description', $metaDescription )"/>
+        <meta charset="utf-8">
+        <title>BulkPaperStraw | UK Based, enviromentaly safe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-<link 
-    rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
-    crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+        <link rel="stylesheet" href="{{url('/assets/bootstrap/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url('/assets/prettyPhoto/css/prettyPhoto.css')}}">
+        <link rel="stylesheet" href="{{url('/assets/css/flexslider.css')}}">
+        <link rel="stylesheet" href="{{url('/assets/css/font-awesome.css')}}">
+        <link rel="stylesheet" href="{{url('/assets/css/style.css')}}">
 
-    <link href="{{ asset('vendor/avored-default/css/app.css') }}" rel="stylesheet">  
-    @stack('styles')
-    <!-- Scripts -->
-    <script>
-        window.Laravel = <?php echo json_encode(['csrfToken' => csrf_token(), ]); ?>
-    </script>
-</head>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-<body>
-    <div class="bg">
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
     <script src="{{ asset('/vendor/avored-default/js/app.js') }}"></script>
     @include("layouts.nav")
 
@@ -58,7 +66,17 @@
     </div>
 
     @include('layouts.footer')
-    </div>    
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.8.2.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.flexslider.js"></script>
+    <script src="assets/js/jquery.tweet.js"></script>
+    <script src="assets/js/jflickrfeed.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/js/jquery.ui.map.min.js"></script>
+    <script src="assets/js/jquery.quicksand.js"></script>
+    <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <script src="assets/js/scripts.js"></script>
     @stack('scripts')
 </body>
 </html>
